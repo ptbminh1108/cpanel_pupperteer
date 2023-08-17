@@ -1,0 +1,12 @@
+
+
+
+
+{
+  "domain": "https://medixam.com:2083",
+  "username": "medixam",
+  "password": "lr+(2xFY4nzD",
+  "hostingService":"hostgator",
+  "zoneFile" : "example.zonefile.txt"
+
+}

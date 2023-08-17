@@ -1,0 +1,127 @@
+
+### <==================================================================> ###
+### ---> This is the server configuration data Created by PMTA SCRIPT 1.3 ==> ###
+### <==================================================================> ###
+
+---> AutoSMTP.com License Information
+     - License Email Address: 
+
+---> SMTP data
+     - Email address: office@exampledomain.org
+     - User: office
+     - Password: vip8ae34t34f34f
+
+	 - Receiving via IMAP: 
+ 	 - Secure connection = STARTTLS / Port: 143
+
+     - Sending via SMTP:
+     - Insecure Connection / Port: 2525
+
+     - Webmail address: http://exampledomain.org/webmail
+     - User: office
+     - Password: vip8ae7rgregreg
+
+     - Reply Email Address
+	 - User: reply
+	 - Pass: reply*345235*234	 
+
+     - Return Bounces ( errors)
+     - Return User bounces: return
+     - Pass: return*345235*234
+	 
+	 - FBL (Feedback Loop)
+	 - User: fbl
+	 - Password: fbl*345235*234
+	 
+	 - Abuse (Complaints)
+	 - User: abuse
+	 - Password: abuse*345235*234
+	 
+	  Postmaster (Complaints)
+	 - User: postmaster
+	 - Password: postmaster*345235*234
+
+---> Monitoring data will be sent to:
+     - E-mail: 
+
+---> SSH Connection
+	 - Users access the SSH on port 
+	 - The office has access to SSH with password vip8ae7f543463
+
+### <=========================================================================================> ###
+
+---> Server information and PMTA useful commands
+
+	The sending limit per hour of this server is 1665
+
+	To stop powerMTA    -  "service pmta stop"
+	To start powerMTA   -  "service pmta start"
+	To restart PowerMTA -  "service pmta restart"
+	
+	------------------------------------------------
+	To stop powerMTA management console    -  "service pmtahttp stop"
+	To start powerMTA management console   -  "service pmtahttp start"
+	To restart PowerMTA management console -  "service pmtahttp restart"
+	
+	-------------------------------------------------
+	
+	To debug your powerMTA installation to find errors - "pmtad --debug"
+
+### <=========================================================================================> ### 
+
+Reverse DNS Information
+------------------------
+
+This is an example of how you should set your Reverse DNS or pass it to your server company, you will find all
+of your Reverse DNS entries within your DNS settings below:
+
+Example: mta0.domain.com POINTS TO ===> 100.100.100.1
+
+	
+### <=========================================================================================> ### 
+
+DNS information : 
+$TTL    38400
+@       IN      SOA     ns1.exampledomain.org.   postmaster.exampledomain.org. (
+                        2014112511 ; serial
+                        90M ; refresh
+                        15M ; retry
+                        14D ; expire
+                        3600 ; default_ttl
+                        )
+#start#
+
+exampledomain.org.   14400   IN   NS   ns1.exampledomain.org.
+exampledomain.org.   14400   IN   NS   ns2.exampledomain.org.
+ 
+ns1   14400   IN   A   212.49.1.12
+ns2   14400   IN   A   115.31.4.11
+ 
+exampledomain.org.   14400   IN   A   212.49.1.12
+ 
+localhost   14400   IN   A   127.0.0.1
+ 
+exampledomain.org.   14400   IN   MX   0   exampledomain.org.
+ 
+server   IN   A   212.49.1.12
+www   IN   A   212.49.1.12
+ 
+namez0   IN   A   212.49.1.12
+namez1   IN   A   212.49.2.13
+namez2   IN   A   212.49.3.14
+namez3   IN   A   212.49.4.15
+namez4   IN   A   212.49.5.16
+ 
+exampledomain.org.   IN   TXT   "v=spf1 a mx ptr a:exampledomain.org ip4:212.49.1.0/24 ip4:212.49.2.0/24 ip4:212.49.3.0/24 ip4:212.49.4.0/24 ip4:212.49.5.0/24 ?all"
+
+_adsp._domainkey.exampledomain.org.   IN   TXT   "dkim=all"
+
+_domainkey.exampledomain.org.   IN   TXT   "o=~; r=abuse@exampledomain.org"
+
+_dmarc.exampledomain.org.   IN   TXT   "v=DMARC1; p=reject; adkim=r; aspf=r; pct=100; ruf=mailto:abuse@exampledomain.org; rua=mailto:abuse@exampledomain.org"
+
+
+
+root._domainkey	IN	TXT	( "v=DKIM1; k=rsa; "
+	  "p=MIGfMA0GCSqGSIb3DQEBAQUCC4GNADCBiQKBgQC7Q21QPerGJ1ehuDQVfTvuqsyOIauOPNWKIhBkgo1mVA5CDY9YcTtWspfgPkbR7/pE6vVUwuyC1ov7cQn90E02sFaD7MY0Fs9WFK/+HxDsId08nzHVdxYI2CHcV71+HHhlLH/1SDBupt+TzuSONqVW34T2q47vO8wh6O9Eps3PfwIDAQABAB" )  ; ----- DKIM key default for de
+#end#

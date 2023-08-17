@@ -1,0 +1,637 @@
+[
+  {
+    "dname_b64": "vkinfotechsolution.com.",
+    "line_index": 5,
+    "data_b64": [
+      "68.65.121.217"
+    ],
+    "record_type": "A",
+    "type": "record",
+    "ttl": 1200
+  },
+  {
+    "line_index": 6,
+    "dname_b64": "vkinfotechsolution.com.",
+    "data_b64": [
+      "v=spf1 +a +mx +ip4:68.65.121.212 ip4:91.237.124.0/24 include:spf.web-hosting.com ~all"
+    ],
+    "type": "record",
+    "ttl": 1200,
+    "record_type": "TXT"
+  },
+  {
+    "type": "record",
+    "ttl": 1200,
+    "record_type": "TXT",
+    "data_b64": [
+      "MAltYWlsLnZraW5mb3RlY2hzb2x1dGlvbi5jb20uCg=="
+    ],
+    "dname_b64": "vkinfotechsolution.com.",
+    "line_index": 7
+  },
+  {
+    "dname_b64": "vkinfotechsolution.com.",
+    "line_index": 8,
+    "data_b64": [
+      "10",
+      "mx1-hosting.jellyfish.systems."
+    ],
+    "type": "record",
+    "ttl": 1200,
+    "record_type": "MX"
+  },
+  {
+    "line_index": 9,
+    "dname_b64": "vkinfotechsolution.com.",
+    "data_b64": [
+      "20",
+      "mx2-hosting.jellyfish.systems."
+    ],
+    "record_type": "MX",
+    "type": "record",
+    "ttl": 1200
+  },
+  {
+    "data_b64": [
+      "30",
+      "mx3-hosting.jellyfish.systems."
+    ],
+    "record_type": "MX",
+    "ttl": 1200,
+    "type": "record",
+    "dname_b64": "vkinfotechsolution.com.",
+    "line_index": 10
+  },
+  {
+    "line_index": 11,
+    "dname_b64": "default._domainkey",
+    "data_b64": [
+      "v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlyXawTJYihzI/F/cdMTN5kdXcPULFJMyIk57invRKXN7sMKXtfcwE+aApi9PZ9qCls7v9atFw71rtvQBhqgMSZ9Rd5C2gWyjKqH4IVbsjQM+ITZXYTtanbIjfZvk0dpEusfepVVma4eyPhEoQsO9LBffgnPlt4GG9VjVWhQNYi8dXdt9qxGlyBmQXIIDRcRyh",
+      "f/YJ0C2lLDPygYoSFW2Sxug640BJSTOlBPWbKdES1vz5g0fqk/xh1Ty9jDn80ChL82KzVO+/58qCJId+8iZqNclcsAnvEL9Yan/6hCw0WFfs5onlSEVo8CrLQx1fricGzE49NEIoSJ4PQgCO6En8QIDAQAB;"
+    ],
+    "ttl": 1200,
+    "type": "record",
+    "record_type": "TXT"
+  },
+  {
+    "dname_b64": "_autodiscover._tcp",
+    "line_index": 12,
+    "data_b64": [
+      "0",
+      "0",
+      "443",
+      "cpanelemaildiscovery.cpanel.net."
+    ],
+    "record_type": "SRV",
+    "ttl": 1200,
+    "type": "record"
+  },
+  {
+    "line_index": 13,
+    "dname_b64": "_caldav._tcp",
+    "record_type": "SRV",
+    "ttl": 1200,
+    "type": "record",
+    "data_b64": [
+      "0",
+      "0",
+      "2079",
+      "premium41.web-hosting.com."
+    ]
+  },
+  {
+    "dname_b64": "_caldav._tcp",
+    "line_index": 14,
+    "data_b64": [
+      "path=/"
+    ],
+    "type": "record",
+    "ttl": 1200,
+    "record_type": "TXT"
+  },
+  {
+    "data_b64": [
+      "0",
+      "0",
+      "2080",
+      "premium41.web-hosting.com."
+    ],
+    "ttl": 1200,
+    "type": "record",
+    "record_type": "SRV",
+    "dname_b64": "_caldavs._tcp",
+    "line_index": 15
+  },
+  {
+    "dname_b64": "_caldavs._tcp",
+    "line_index": 16,
+    "record_type": "TXT",
+    "type": "record",
+    "ttl": 1200,
+    "data_b64": [
+      "path=/"
+    ]
+  },
+  {
+    "dname_b64": "_carddav._tcp",
+    "line_index": 17,
+    "type": "record",
+    "ttl": 1200,
+    "record_type": "SRV",
+    "data_b64": [
+      "0",
+      "0",
+      "2079",
+      "premium41.web-hosting.com."
+    ]
+  },
+  {
+    "dname_b64": "_carddav._tcp",
+    "line_index": 18,
+    "data_b64": [
+      "path=/"
+    ],
+    "record_type": "TXT",
+    "type": "record",
+    "ttl": 1200
+  },
+  {
+    "record_type": "SRV",
+    "type": "record",
+    "ttl": 1200,
+    "data_b64": [
+      "0",
+      "0",
+      "2080",
+      "premium41.web-hosting.com."
+    ],
+    "line_index": 19,
+    "dname_b64": "_carddavs._tcp"
+  },
+  {
+    "record_type": "TXT",
+    "ttl": 1200,
+    "type": "record",
+    "data_b64": [
+      "path=/"
+    ],
+    "line_index": 20,
+    "dname_b64": "_carddavs._tcp"
+  },
+  {
+    "data_b64": [
+      "68.65.121.217"
+    ],
+    "record_type": "A",
+    "type": "record",
+    "ttl": 1200,
+    "dname_b64": "autoconfig",
+    "line_index": 21
+  },
+  {
+    "data_b64": [
+      "68.65.121.217"
+    ],
+    "type": "record",
+    "ttl": 1200,
+    "record_type": "A",
+    "dname_b64": "autodiscover",
+    "line_index": 22
+  },
+  {
+    "dname_b64": "cpanel",
+    "line_index": 23,
+    "record_type": "A",
+    "ttl": 1200,
+    "type": "record",
+    "data_b64": [
+      "68.65.121.217"
+    ]
+  },
+  {
+    "data_b64": [
+      "68.65.121.217"
+    ],
+    "ttl": 1200,
+    "type": "record",
+    "record_type": "A",
+    "line_index": 24,
+    "dname_b64": "cpcalendars"
+  },
+  {
+    "dname_b64": "cpcontacts",
+    "line_index": 25,
+    "data_b64": [
+      "68.65.121.217"
+    ],
+    "record_type": "A",
+    "ttl": 1200,
+    "type": "record"
+  },
+  {
+    "data_b64": [
+      "68.65.121.217"
+    ],
+    "type": "record",
+    "ttl": 1200,
+    "record_type": "A",
+    "dname_b64": "ftp",
+    "line_index": 26
+  },
+  {
+    "data_b64": [
+      "68.65.121.217"
+    ],
+    "record_type": "A",
+    "ttl": 1200,
+    "type": "record",
+    "dname_b64": "imap",
+    "line_index": 27
+  },
+  {
+    "data_b64": [
+      "68.65.121.217"
+    ],
+    "record_type": "A",
+    "ttl": 1200,
+    "type": "record",
+    "dname_b64": "mail",
+    "line_index": 28
+  },
+  {
+    "line_index": 29,
+    "dname_b64": "pop3",
+    "ttl": 1200,
+    "type": "record",
+    "record_type": "A",
+    "data_b64": [
+      "68.65.121.217"
+    ]
+  },
+  {
+    "line_index": 30,
+    "dname_b64": "smtp",
+    "ttl": 1200,
+    "type": "record",
+    "record_type": "A",
+    "data_b64": [
+      "68.65.121.217"
+    ]
+  },
+  {
+    "record_type": "A",
+    "type": "record",
+    "ttl": 1200,
+    "data_b64": [
+      "68.65.121.217"
+    ],
+    "dname_b64": "webdisk",
+    "line_index": 31
+  },
+  {
+    "dname_b64": "webmail",
+    "line_index": 32,
+    "data_b64": [
+      "68.65.121.217"
+    ],
+    "record_type": "A",
+    "type": "record",
+    "ttl": 1200
+  },
+  {
+    "dname_b64": "whm",
+    "line_index": 33,
+    "type": "record",
+    "ttl": 1200,
+    "record_type": "A",
+    "data_b64": [
+      "68.65.121.217"
+    ]
+  },
+  {
+    "line_index": 34,
+    "dname_b64": "www",
+    "record_type": "CNAME",
+    "ttl": 1200,
+    "type": "record",
+    "data_b64": [
+      "vkinfotechsolution.com."
+    ]
+  },
+  {
+    "line_index": 35,
+    "dname_b64": "server",
+    "data_b64": [
+      "1.1.1.1"
+    ],
+    "type": "record",
+    "ttl": 1200,
+    "record_type": "A"
+  },
+  {
+    "data_b64": [
+      "68.65.121.217"
+    ],
+    "ttl": 1200,
+    "type": "record",
+    "record_type": "A",
+    "line_index": 36,
+    "dname_b64": "vkcluster.com"
+  },
+  {
+    "data_b64": [
+      "68.65.121.217"
+    ],
+    "type": "record",
+    "ttl": 1200,
+    "record_type": "A",
+    "dname_b64": "www.vkcluster.com",
+    "line_index": 37
+  },
+  {
+    "dname_b64": "default._domainkey.vkcluster.com",
+    "line_index": 38,
+    "data_b64": [
+      "v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3FfwPwnJB0VThKBQ7wOeqH3X8XzODVgik+tDi7c1mFzZcKFvwj9twTG81do0zgbUiXe/FqU0Nw8VyzsxQfL5kojkGePnAKXViV2UmC1nSY3HUcd1yudsGvcWKcIViRi+KEVROVL53fmEmRlLnDutgJtlNa8Ko40uTid4QXRV506Kh8lXwZn+0VXXuAX4v3TuL",
+      "TEqqxc+/yLXZchMlGnJqsdwUYI0F95RCnWJzBwkxg84rzA9dTnLF11wkdrR6LDKwy1WdUSGirkGLJbHbNoTHrr6QdzqwF9MIk9hfjUPMfaKLLZUdnEHF0qNA/S2+Ctul5YAYkOI3g0Hdv09aFOoTwIDAQAB;"
+    ],
+    "record_type": "TXT",
+    "ttl": 1200,
+    "type": "record"
+  },
+  {
+    "ttl": 1200,
+    "type": "record",
+    "record_type": "TXT",
+    "data_b64": [
+      "v=spf1 +a +mx +ip4:68.65.121.212 include:spf.web-hosting.com ~all"
+    ],
+    "dname_b64": "vkcluster.com",
+    "line_index": 39
+  },
+  {
+    "data_b64": [
+      "0",
+      "0",
+      "2080",
+      "premium41.web-hosting.com."
+    ],
+    "record_type": "SRV",
+    "type": "record",
+    "ttl": 1200,
+    "line_index": 40,
+    "dname_b64": "_carddavs._tcp.vkcluster.com"
+  },
+  {
+    "data_b64": [
+      "path=/"
+    ],
+    "type": "record",
+    "ttl": 1200,
+    "record_type": "TXT",
+    "dname_b64": "_carddavs._tcp.vkcluster.com",
+    "line_index": 41
+  },
+  {
+    "dname_b64": "webmail.vkcluster.com",
+    "line_index": 42,
+    "record_type": "A",
+    "type": "record",
+    "ttl": 1200,
+    "data_b64": [
+      "68.65.121.217"
+    ]
+  },
+  {
+    "type": "record",
+    "ttl": 1200,
+    "record_type": "A",
+    "data_b64": [
+      "68.65.121.217"
+    ],
+    "dname_b64": "webdisk.vkcluster.com",
+    "line_index": 43
+  },
+  {
+    "dname_b64": "autoconfig.vkcluster.com",
+    "line_index": 44,
+    "record_type": "A",
+    "type": "record",
+    "ttl": 1200,
+    "data_b64": [
+      "68.65.121.217"
+    ]
+  },
+  {
+    "data_b64": [
+      "68.65.121.217"
+    ],
+    "record_type": "A",
+    "type": "record",
+    "ttl": 1200,
+    "line_index": 45,
+    "dname_b64": "autodiscover.vkcluster.com"
+  },
+  {
+    "data_b64": [
+      "68.65.121.217"
+    ],
+    "record_type": "A",
+    "ttl": 1200,
+    "type": "record",
+    "line_index": 46,
+    "dname_b64": "whm.vkcluster.com"
+  },
+  {
+    "line_index": 47,
+    "dname_b64": "_autodiscover._tcp.vkcluster.com",
+    "data_b64": [
+      "0",
+      "0",
+      "443",
+      "cpanelemaildiscovery.cpanel.net."
+    ],
+    "record_type": "SRV",
+    "type": "record",
+    "ttl": 1200
+  },
+  {
+    "line_index": 48,
+    "dname_b64": "_carddav._tcp.vkcluster.com",
+    "data_b64": [
+      "0",
+      "0",
+      "2079",
+      "premium41.web-hosting.com."
+    ],
+    "type": "record",
+    "ttl": 1200,
+    "record_type": "SRV"
+  },
+  {
+    "record_type": "TXT",
+    "ttl": 1200,
+    "type": "record",
+    "data_b64": [
+      "path=/"
+    ],
+    "dname_b64": "_carddav._tcp.vkcluster.com",
+    "line_index": 49
+  },
+  {
+    "record_type": "A",
+    "type": "record",
+    "ttl": 1200,
+    "data_b64": [
+      "68.65.121.217"
+    ],
+    "dname_b64": "cpcontacts.vkcluster.com",
+    "line_index": 50
+  },
+  {
+    "data_b64": [
+      "0",
+      "0",
+      "2080",
+      "premium41.web-hosting.com."
+    ],
+    "type": "record",
+    "ttl": 1200,
+    "record_type": "SRV",
+    "dname_b64": "_caldavs._tcp.vkcluster.com",
+    "line_index": 51
+  },
+  {
+    "dname_b64": "_caldavs._tcp.vkcluster.com",
+    "line_index": 52,
+    "ttl": 1200,
+    "type": "record",
+    "record_type": "TXT",
+    "data_b64": [
+      "path=/"
+    ]
+  },
+  {
+    "dname_b64": "cpanel.vkcluster.com",
+    "line_index": 53,
+    "ttl": 1200,
+    "type": "record",
+    "record_type": "A",
+    "data_b64": [
+      "68.65.121.217"
+    ]
+  },
+  {
+    "line_index": 54,
+    "dname_b64": "_caldav._tcp.vkcluster.com",
+    "ttl": 1200,
+    "type": "record",
+    "record_type": "SRV",
+    "data_b64": [
+      "0",
+      "0",
+      "2079",
+      "premium41.web-hosting.com."
+    ]
+  },
+  {
+    "record_type": "TXT",
+    "type": "record",
+    "ttl": 1200,
+    "data_b64": [
+      "path=/"
+    ],
+    "line_index": 55,
+    "dname_b64": "_caldav._tcp.vkcluster.com"
+  },
+  {
+    "data_b64": [
+      "68.65.121.217"
+    ],
+    "ttl": 1200,
+    "type": "record",
+    "record_type": "A",
+    "line_index": 56,
+    "dname_b64": "cpcalendars.vkcluster.com"
+  },
+  {
+    "ttl": 1200,
+    "type": "record",
+    "record_type": "A",
+    "data_b64": [
+      "91.237.124.197"
+    ],
+    "dname_b64": "pellegrino",
+    "line_index": 57
+  },
+  {
+    "dname_b64": "evian",
+    "line_index": 58,
+    "record_type": "A",
+    "type": "record",
+    "ttl": 1200,
+    "data_b64": [
+      "91.237.124.203"
+    ]
+  },
+  {
+    "data_b64": [
+      "91.237.124.211"
+    ],
+    "record_type": "A",
+    "ttl": 1200,
+    "type": "record",
+    "dname_b64": "apfelschorle",
+    "line_index": 59
+  },
+  {
+    "data_b64": [
+      "91.237.124.217"
+    ],
+    "type": "record",
+    "ttl": 1200,
+    "record_type": "A",
+    "line_index": 60,
+    "dname_b64": "orangensaft"
+  },
+  {
+    "data_b64": [
+      "91.237.124.249"
+    ],
+    "ttl": 1200,
+    "type": "record",
+    "record_type": "A",
+    "line_index": 61,
+    "dname_b64": "schnaps"
+  },
+  {
+    "line_index": 62,
+    "dname_b64": "root._domainkey",
+    "data_b64": [
+      "v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQClVzFN9/BmuF84eBJdECiO1AwXufBGZwhi0m21AZLagxjRV8MD1db0m3wOcJet0csj2QA4vscPxu9ztFVBOIMxYX6XbCLMgoN8+9iaRGRA0NdhfLWx67UKLzpDRL2qzi37R5E1zDbxbYuW07blyxaClGzhnK4Ody/zHOKDYbaOFwIDAQAB"
+    ],
+    "type": "record",
+    "ttl": 1200,
+    "record_type": "TXT"
+  },
+  {
+    "line_index": 63,
+    "dname_b64": "_dmarc",
+    "record_type": "TXT",
+    "ttl": 1200,
+    "type": "record",
+    "data_b64": [
+      "v=DMARC1;p=reject;sp=none;adkim=r;aspf=r;pct=100;fo=0;rf=afrf;ri=86400;rua=mailto:abuse@vkinfotechsolution.com;ruf=mailto:abuse@vkinfotechsolution.com"
+    ]
+  },
+  {
+    "line_index": 64,
+    "dname_b64": "_domainkey",
+    "type": "record",
+    "ttl": 1200,
+    "record_type": "TXT",
+    "data_b64": [
+      "o=~; r=abuse@vkinfotechsolution.com"
+    ]
+  }
+]
