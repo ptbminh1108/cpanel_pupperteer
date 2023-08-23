@@ -10,3 +10,7 @@
   "zoneFile" : "example.zonefile.txt"
 
 }
+
+node main.js https://vkinfotechsolution.com:2083 vkinnfqj Cjk1VDhr9QwF namecheap example.zonefile.txt 
+
+https://vkinfotechsolution.com:2083|vkinnfqj|Cjk1VDhr9QwF
