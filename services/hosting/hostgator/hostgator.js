@@ -174,8 +174,7 @@ async function process(dnsZoneData, config) {
       }
     }
   } catch (e) {
-    console.log("error", e)
-    await driver.quit();
+    console.log("Please check domain , it may be cann't be reached")
   } finally {
     await driver.quit();
   }
