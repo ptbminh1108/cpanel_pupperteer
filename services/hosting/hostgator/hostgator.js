@@ -27,7 +27,6 @@ async function process(dnsZoneData, config) {
     await inputPassword.sendKeys(config.password)
     let button = await driver.findElement(By.id('login_submit'));
     await button.click();
-    await driver.wait(until.elementLocated(By.id('cpHordeBanner')), 10000);
 
     try {
       await driver.wait(until.elementLocated(By.id('cpHordeBanner')), 10000);
