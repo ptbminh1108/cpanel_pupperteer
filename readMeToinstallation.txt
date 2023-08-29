@@ -4,14 +4,9 @@ INSTALLATION
 
 RUNNING
   + IN project folder ( have main.js file) type   
-    "node main.js https://vkinfotechsolution.com:2083 vkinnfqj Cjk1VDhr9QwF namecheap example.zonefile.txt" 
+    "node main.js" 
   
-  ( explain argument passing
-    "https://vkinfotechsolution.com:2083" - is domain to access CPANEL ADMIN
-    "vkinnfqj" - is username to login
-    "Cjk1VDhr9QwF" - is password to login
-    "namecheap" - is host service type (ex: namecheap, hostgator, ext ...)
-    "example.zonefile.txt" - is zoneDataFile name (You put it in data/zonefile/{zoneDataFile})
-  )
+  + The hosting data LOGIN ( include: domain:port|username|password|hostingService|ZoneFileName) is store /data/cpanel.txt
+    (    https://vkinfotechsolution.com:2083|vkinnfqj|Cjk1VDhr9QwF|hostgator|example.zonefile.txt      )
 
 

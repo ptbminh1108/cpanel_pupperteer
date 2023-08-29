@@ -1,4 +1,5 @@
 const Fs = require('fs')
+
 const nameCheapHostingProcess = require('./services/hosting/namecheap/namecheap')
 const hostgatorHostingProcess = require('./services/hosting/hostgator/hostgator')
 const { convertZoneFiletoArray } = require('./services/processZoneFileData/formatData');
@@ -12,35 +13,35 @@ const { convertZoneFiletoArray } = require('./services/processZoneFileData/forma
 
 (async function main() {
 
-
-  let args = process.argv
+  const configData = await Fs.readFileSync(`./././data/cpanel.txt`,'utf8');
+  const args = configData.split('|')
   let config = {}
-  if (args[2]) {
-    config.domain = args[2]
+  if (args[0]) {
+    config.domain = args[0]
   } else {
     console.log('not see DOMAIN parameter')
   }
 
-  if (args[3]) {
-    config.username = args[3]
+  if (args[1]) {
+    config.username = args[1]
   } else {
     console.log('not see Username parameter')
   }
 
-  if (args[4]) {
-    config.password = args[4]
+  if (args[2]) {
+    config.password = args[2]
   } else {
     console.log('not see Password parameter')
   }
 
-  if (args[5]) {
-    config.hostingService = args[5]
+  if (args[3]) {
+    config.hostingService = args[3]
   } else {
     console.log('not see HostingService parameter')
   }
 
-  if (args[6]) {
-    config.zoneFile = args[6]
+  if (args[4]) {
+    config.zoneFile = args[4]
   } else {
     console.log('not see ZoneFile parameter')
   }
