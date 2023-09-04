@@ -2,8 +2,7 @@ const Fs = require('fs')
 // read Config
 
 async function convertZoneFiletoArray(zoneFileName) {
-  const zoneFileData = await Fs.readFileSync(`./././data/zonefile/${zoneFileName}`, 'utf-8');
-
+  const zoneFileData = await Fs.readFileSync(`././${zoneFileName}`, 'utf-8');
 
 
   // get DNS information

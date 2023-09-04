@@ -13,7 +13,7 @@ const { convertZoneFiletoArray } = require('./services/processZoneFileData/forma
 
 (async function main() {
 
-  const configData = await Fs.readFileSync(`./././data/cpanel.txt`,'utf8');
+  const configData = await Fs.readFileSync(`./cpanel.txt`,'utf8');
   const args = configData.split('|')
   let config = {}
   if (args[0]) {
