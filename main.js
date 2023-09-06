@@ -13,7 +13,7 @@ const { convertZoneFiletoArray } = require('./services/processZoneFileData/forma
 
 (async function main() {
 
-  const configData = await Fs.readFileSync(`./cpanel.txt`,'utf8');
+  const configData = await Fs.readFileSync(`./cpanel.txt`,'utf8').trim();
   const args = configData.split('|')
   let config = {}
   if (args[0]) {
@@ -47,6 +47,14 @@ const { convertZoneFiletoArray } = require('./services/processZoneFileData/forma
   }
 
   console.log(config)
+
+  // check zonefile exist
+  if (Fs.existsSync(config.zoneFile)) {
+    config.zoneFile = args[4]
+  } else {
+    console.log(" Error zonefile not found !!")
+    return
+  }
 
   let DNSZoneData = await convertZoneFiletoArray(config.zoneFile)
 
