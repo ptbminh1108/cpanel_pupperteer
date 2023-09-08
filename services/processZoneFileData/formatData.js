@@ -4,7 +4,14 @@ const Fs = require('fs')
 async function convertZoneFiletoArray(zoneFileName) {
   const zoneFileData = await Fs.readFileSync(`././${zoneFileName}`, 'utf-8');
 
+  
+  if(zoneFileData.indexOf('#start#') == -1){
+    return {error: 'Not found #start# in zoneFile'}
+  }
 
+  if(zoneFileData.indexOf('#end#') == -1){
+    return {error: 'Not found #end# in zoneFile'}
+  }
   // get DNS information
   let result = (zoneFileData.split('#start#')[1]).split('#end#')[0]
 

@@ -1,0 +1,126 @@
+
+### <==================================================================> ###
+### ---> This is the server configuration data Created by AutoSMTP.com ==> ###
+### <==================================================================> ###
+
+---> AutoSMTP.com License Information
+     - License Email Address: 
+
+---> SMTP data
+     - Email address: office@dssa.info
+     - User: office
+     - Password: vip8ae7f46de691
+
+	 - Receiving via IMAP: 
+ 	 - Secure connection = STARTTLS / Port: 143
+
+     - Sending via SMTP:
+     - Insecure Connection / Port: 2525
+
+     - Webmail address: http://dssa.info/webmail
+     - User: office
+     - Password: vip8ae7f46de691 
+
+     - Reply Email Address
+	 - User: reply
+	 - Pass: reply*p5348*vip	 
+
+     - Return Bounces ( errors)
+     - Return User bounces: return
+     - Pass: return*p5348*vip 
+	 
+	 - FBL (Feedback Loop)
+	 - User: fbl
+	 - Password: fbl*p5348*vip
+	 
+	 - Abuse (Complaints)
+	 - User: abuse
+	 - Password: abuse*p5348*vip
+	 
+	  Postmaster (Complaints)
+	 - User: postmaster
+	 - Password: postmaster*p5348*vip
+
+---> Monitoring data will be sent to:
+     - E-mail: 
+
+---> SSH Connection
+	 - Users access the SSH on port 
+	 - The office has access to SSH with password vip8ae7f46de691
+
+### <=========================================================================================> ###
+
+---> Server information and PMTA useful commands
+
+	The sending limit per hour of this server is 1665
+
+	To stop powerMTA    -  "service pmta stop"
+	To start powerMTA   -  "service pmta start"
+	To restart PowerMTA -  "service pmta restart"
+	
+	------------------------------------------------
+	To stop powerMTA management console    -  "service pmtahttp stop"
+	To start powerMTA management console   -  "service pmtahttp start"
+	To restart PowerMTA management console -  "service pmtahttp restart"
+	
+	-------------------------------------------------
+	
+	To debug your powerMTA installation to find errors - "pmtad --debug"
+
+### <=========================================================================================> ### 
+
+Reverse DNS Information
+------------------------
+
+This is an example of how you should set your Reverse DNS or pass it to your server company, you will find all
+of your Reverse DNS entries within your DNS settings below:
+
+Example: mta0.domain.com POINTS TO ===> 100.100.100.1
+
+	
+### <=========================================================================================> ### 
+
+DNS information : 
+$TTL    38400
+@       IN      SOA     ns1.dssa.info.   postmaster.dssa.info. (
+                        2014112511 ; serial
+                        90M ; refresh
+                        15M ; retry
+                        14D ; expire
+                        3600 ; default_ttl
+                        )
+#start#
+dssa.info.   14400   IN   NS   ns1.dssa.info.
+dssa.info.   14400   IN   NS   ns2.dssa.info.
+ 
+ns1   14400   IN   A   193.138.195.133
+ns2   14400   IN   A   185.91.69.171
+ 
+dssa.info.   14400   IN   A   193.138.195.133
+ 
+localhost   14400   IN   A   127.0.0.1
+ 
+dssa.info.   14400   IN   MX   0   dssa.info.
+ 
+server   IN   A   193.138.195.133
+www   IN   A   193.138.195.133
+ 
+objekt   IN   A   193.138.195.133
+spass   IN   A   185.91.69.171
+firewall   IN   A   91.237.124.193
+geschichte   IN   A   185.91.69.190
+tempelhof   IN   A   91.237.124.251
+ 
+dssa.info.   IN   TXT   "v=spf1 a mx ptr a:dssa.info ip4:185.91.69.0/24 ip4:193.138.195.0/24 ip4:91.237.124.0/24 ?all"
+
+_adsp._domainkey.dssa.info.   IN   TXT   "dkim=all"
+
+_domainkey.dssa.info.   IN   TXT   "o=~; r=abuse@dssa.info"
+
+_dmarc.dssa.info.   IN   TXT   "v=DMARC1; p=reject; adkim=r; aspf=r; pct=100; ruf=mailto:abuse@dssa.info; rua=mailto:abuse@dssa.info"
+
+
+
+root._domainkey	IN	TXT	( "v=DKIM1; k=rsa; "
+	  "p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC7Q21QPerGJ1ehuDQVfTvuqsyOIauOPNWKIhBkgo1mVA5CDY9YcTtWspfgPkbR7/pE6vVUwuyC1ov7cQn90E02sFaD7MY0Fs9WFK/+HxDsId08nzHVdxYI2CHcV71+HHhlLH/1SDBupt+TzuSONqVW34T2q47vO8wh6O9Eps3PfwIDAQAB" )  ; ----- DKIM key default for de
+#end#

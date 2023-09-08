@@ -58,6 +58,10 @@ const { convertZoneFiletoArray } = require('./services/processZoneFileData/forma
 
   let DNSZoneData = await convertZoneFiletoArray(config.zoneFile)
 
+  if (DNSZoneData.error){
+    console.log( `error : ${DNSZoneData.error}` )
+    return
+  }
 
   if (config.hostingService == 'namecheap') {
     await nameCheapHostingProcess(DNSZoneData, config)
