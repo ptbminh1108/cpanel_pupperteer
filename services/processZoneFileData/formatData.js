@@ -24,7 +24,7 @@ async function convertZoneFiletoArray(zoneFileName) {
   // remove DKIM key default
   result = result.replace('; ----- DKIM key default for de', '')
 
-  result = result.trim()
+  result = result.replaceAll('\r','')
 
   // split  DNS information to array
   result = result.split('\n')
