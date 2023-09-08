@@ -15,7 +15,7 @@ function getSessionLogin(Cookies) {
 
 async function process(dnsZoneData, config) {
   // let driver = await new Builder().forBrowser(Browser.CHROME).build();
-  let driver = await new Builder().forBrowser(Browser.CHROME).setChromeOptions(new chrome.Options().headless()).build();
+  let driver = await new Builder().forBrowser(Browser.CHROME).setChromeOptions(new chrome.Options().headless().addArguments('--no-sandbox').addArguments('--disable-dev-shm-usage')).build();
   try {
     await driver.get(config.domain.replace('https', 'http'));
     await driver.wait(until.elementLocated(By.id('user')), 30000);
