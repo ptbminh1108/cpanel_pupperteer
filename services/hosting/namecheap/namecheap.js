@@ -94,95 +94,95 @@ async function process(dnsZoneData, config,zoneFileDataStr) {
       let dnsData = dnsZoneData[index]
 
       if (dnsData.type && dnsData.type != '') {
-        // if (dnsData.type == 'subdomain') {
-        //   let rootDomainKeyexist = dataZonesManage.find(dataZone => {
-        //     if (typeof (dataZone.dname_b64) != 'string') return false
-        //     if ( dnsData.dnsData[0] == dataZone.dname_b64 && dnsData.dnsData[2] == dataZone.record_type ) return true
-        //     return false
-        //   })
+        if (dnsData.type == 'subdomain') {
+          let rootDomainKeyexist = dataZonesManage.find(dataZone => {
+            if (typeof (dataZone.dname_b64) != 'string') return false
+            if ( dnsData.dnsData[0] == dataZone.dname_b64 && dnsData.dnsData[2] == dataZone.record_type ) return true
+            return false
+          })
 
-        //   // add new
-        //   if (typeof rootDomainKeyexist === "undefined") {
-        //     let postData = `{"dname":"${dnsData.dnsData[0]}","ttl":1200,"record_type":"${dnsData.dnsData[2]}","line_index":null,"data":["${dnsData.dnsData[3]}"]}`
-        //     let resApi = await apiRequestNameCheap.requestAddZoneDataApi(domainFinded, IdSessionLogin, sessionLogin, serial, postData)
-        //     if (resApi.errors == null) {
-        //       serial = resApi.serial
-        //     }
-        //     // update with new data 
-        //   } else {
-        //     let postData = `{"dname":"${rootDomainKeyexist.dname_b64}","ttl":1200,"record_type":"${dnsData.dnsData[2]}","line_index":${rootDomainKeyexist.line_index},"data":["${dnsData.dnsData[3]}"]}`
-        //     let resApi = await apiRequestNameCheap.requestEditZoneDataApi(domainFinded, IdSessionLogin, sessionLogin, serial, postData)
-        //     if (resApi.errors == null) {
-        //       serial = resApi.serial
-        //     }
-        //   }
-        // }
-        // if (dnsData.type == 'domainkey') {
-        //   let rootDomainKeyexist = dataZonesManage.find(dataZone => {
-        //     if (typeof (dataZone.dname_b64) != 'string') return false
-        //     if ( ( dnsData.dnsData[0] == dataZone.dname_b64 || dnsData.dnsData[0] == dataZone.dname_b64 + '.' + domainFinded + '.' ) && dnsData.dnsData[2] == dataZone.record_type ) return true
-        //     return false
-        //   })
-        //   // add new
-        //   if (typeof rootDomainKeyexist === "undefined") {
-        //     let postData = `{"dname":"${dnsData.dnsData[0]}","ttl":1200,"record_type":"${dnsData.dnsData[2]}","line_index":null,"data":["${dnsData.dnsData[3]}"]}`
-        //     let resApi = await apiRequestNameCheap.requestAddZoneDataApi(domainFinded, IdSessionLogin, sessionLogin, serial, postData)
-        //     if (resApi.errors == null) {
-        //       serial = resApi.serial
-        //     }
-        //     // update with new data 
-        //   } else {
-        //     let postData = `{"dname":"${rootDomainKeyexist.dname_b64}","ttl":1200,"record_type":"${dnsData.dnsData[2]}","line_index":${rootDomainKeyexist.line_index},"data":["${dnsData.dnsData[3]}"]}`
-        //     let resApi = await apiRequestNameCheap.requestEditZoneDataApi(domainFinded, IdSessionLogin, sessionLogin, serial, postData)
-        //     if (resApi.errors == null) {
-        //       serial = resApi.serial
-        //     }
-        //   }
-        // }
-        // if (dnsData.type == 'root_domainkey') {
-        //   let rootDomainKeyexist = dataZonesManage.find(dataZone => {
-        //     if (typeof (dataZone.dname_b64) != 'string') return false
-        //     return dataZone.dname_b64.indexOf('domainkey') == -1 ? false : true
-        //   })
+          // add new
+          if (typeof rootDomainKeyexist === "undefined") {
+            let postData = `{"dname":"${dnsData.dnsData[0]}","ttl":1200,"record_type":"${dnsData.dnsData[2]}","line_index":null,"data":["${dnsData.dnsData[3]}"]}`
+            let resApi = await apiRequestNameCheap.requestAddZoneDataApi(domainFinded, IdSessionLogin, sessionLogin, serial, postData)
+            if (resApi.errors == null) {
+              serial = resApi.serial
+            }
+            // update with new data 
+          } else {
+            let postData = `{"dname":"${rootDomainKeyexist.dname_b64}","ttl":1200,"record_type":"${dnsData.dnsData[2]}","line_index":${rootDomainKeyexist.line_index},"data":["${dnsData.dnsData[3]}"]}`
+            let resApi = await apiRequestNameCheap.requestEditZoneDataApi(domainFinded, IdSessionLogin, sessionLogin, serial, postData)
+            if (resApi.errors == null) {
+              serial = resApi.serial
+            }
+          }
+        }
+        if (dnsData.type == 'domainkey') {
+          let rootDomainKeyexist = dataZonesManage.find(dataZone => {
+            if (typeof (dataZone.dname_b64) != 'string') return false
+            if ( ( dnsData.dnsData[0] == dataZone.dname_b64 || dnsData.dnsData[0] == dataZone.dname_b64 + '.' + domainFinded + '.' ) && dnsData.dnsData[2] == dataZone.record_type ) return true
+            return false
+          })
+          // add new
+          if (typeof rootDomainKeyexist === "undefined") {
+            let postData = `{"dname":"${dnsData.dnsData[0]}","ttl":1200,"record_type":"${dnsData.dnsData[2]}","line_index":null,"data":["${dnsData.dnsData[3]}"]}`
+            let resApi = await apiRequestNameCheap.requestAddZoneDataApi(domainFinded, IdSessionLogin, sessionLogin, serial, postData)
+            if (resApi.errors == null) {
+              serial = resApi.serial
+            }
+            // update with new data 
+          } else {
+            let postData = `{"dname":"${rootDomainKeyexist.dname_b64}","ttl":1200,"record_type":"${dnsData.dnsData[2]}","line_index":${rootDomainKeyexist.line_index},"data":["${dnsData.dnsData[3]}"]}`
+            let resApi = await apiRequestNameCheap.requestEditZoneDataApi(domainFinded, IdSessionLogin, sessionLogin, serial, postData)
+            if (resApi.errors == null) {
+              serial = resApi.serial
+            }
+          }
+        }
+        if (dnsData.type == 'root_domainkey') {
+          let rootDomainKeyexist = dataZonesManage.find(dataZone => {
+            if (typeof (dataZone.dname_b64) != 'string') return false
+            return dataZone.dname_b64.indexOf('domainkey') == -1 ? false : true
+          })
 
-        //   // add new
-        //   if (typeof rootDomainKeyexist === "undefined") {
-        //     let postData = `{"dname":"${dnsData.dnsData[0]}","ttl":1200,"record_type":"${dnsData.dnsData[2]}","line_index":null,"data":["${dnsData.dnsData[3]}"]}`
-        //     let resApi = await apiRequestNameCheap.requestAddZoneDataApi(domainFinded, IdSessionLogin, sessionLogin, serial, postData)
-        //     if (resApi.errors == null) {
-        //       serial = resApi.serial
-        //     }
-        //     // update with new data 
-        //   } else {
-        //     let postData = `{"dname":"${dnsData.dnsData[0]}","ttl":1200,"record_type":"${dnsData.dnsData[2]}","line_index":${rootDomainKeyexist.line_index},"data":["${dnsData.dnsData[3]}"]}`
-        //     let resApi = await apiRequestNameCheap.requestEditZoneDataApi(domainFinded, IdSessionLogin, sessionLogin, serial, postData)
-        //     if (resApi.errors == null) {
-        //       serial = resApi.serial
-        //     }
-        //   }
-        // }
-        // if (dnsData.type == 'dmarc') {
-        //   let rootDomainKeyexist = dataZonesManage.find(dataZone => {
-        //     if (typeof (dataZone.dname_b64) != 'string') return false
-        //     return dataZone.dname_b64.indexOf('_dmarc') == -1 ? false : true
-        //   })
+          // add new
+          if (typeof rootDomainKeyexist === "undefined") {
+            let postData = `{"dname":"${dnsData.dnsData[0]}","ttl":1200,"record_type":"${dnsData.dnsData[2]}","line_index":null,"data":["${dnsData.dnsData[3]}"]}`
+            let resApi = await apiRequestNameCheap.requestAddZoneDataApi(domainFinded, IdSessionLogin, sessionLogin, serial, postData)
+            if (resApi.errors == null) {
+              serial = resApi.serial
+            }
+            // update with new data 
+          } else {
+            let postData = `{"dname":"${dnsData.dnsData[0]}","ttl":1200,"record_type":"${dnsData.dnsData[2]}","line_index":${rootDomainKeyexist.line_index},"data":["${dnsData.dnsData[3]}"]}`
+            let resApi = await apiRequestNameCheap.requestEditZoneDataApi(domainFinded, IdSessionLogin, sessionLogin, serial, postData)
+            if (resApi.errors == null) {
+              serial = resApi.serial
+            }
+          }
+        }
+        if (dnsData.type == 'dmarc') {
+          let rootDomainKeyexist = dataZonesManage.find(dataZone => {
+            if (typeof (dataZone.dname_b64) != 'string') return false
+            return dataZone.dname_b64.indexOf('_dmarc') == -1 ? false : true
+          })
 
-        //   // add new
-        //   if (typeof rootDomainKeyexist === "undefined") {
-        //     let postData = `{"dname":"${dnsData.dnsData[0]}","ttl":1200,"record_type":"${dnsData.dnsData[2]}","line_index":null,"data":["${dnsData.dnsData[3]}"]}`
-        //     let resApi = await apiRequestNameCheap.requestAddZoneDataApi(domainFinded, IdSessionLogin, sessionLogin, serial, postData)
-        //     if (resApi.errors == null) {
-        //       serial = resApi.serial
-        //     }
-        //     // update with new data 
-        //   } else {
-        //     let postData = `{"dname":"${dnsData.dnsData[0]}","ttl":1200,"record_type":"${dnsData.dnsData[2]}","line_index":${rootDomainKeyexist.line_index},"data":["${dnsData.dnsData[3]}"]}`
-        //     let resApi = await apiRequestNameCheap.requestEditZoneDataApi(domainFinded, IdSessionLogin, sessionLogin, serial, postData)
-        //     if (resApi.errors == null) {
-        //       serial = resApi.serial
-        //     }
-        //   }
-        // }
+          // add new
+          if (typeof rootDomainKeyexist === "undefined") {
+            let postData = `{"dname":"${dnsData.dnsData[0]}","ttl":1200,"record_type":"${dnsData.dnsData[2]}","line_index":null,"data":["${dnsData.dnsData[3]}"]}`
+            let resApi = await apiRequestNameCheap.requestAddZoneDataApi(domainFinded, IdSessionLogin, sessionLogin, serial, postData)
+            if (resApi.errors == null) {
+              serial = resApi.serial
+            }
+            // update with new data 
+          } else {
+            let postData = `{"dname":"${dnsData.dnsData[0]}","ttl":1200,"record_type":"${dnsData.dnsData[2]}","line_index":${rootDomainKeyexist.line_index},"data":["${dnsData.dnsData[3]}"]}`
+            let resApi = await apiRequestNameCheap.requestEditZoneDataApi(domainFinded, IdSessionLogin, sessionLogin, serial, postData)
+            if (resApi.errors == null) {
+              serial = resApi.serial
+            }
+          }
+        }
 
         if (dnsData.type == 'spf') {
 
