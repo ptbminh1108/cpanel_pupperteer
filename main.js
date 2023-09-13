@@ -12,7 +12,6 @@ const { convertZoneFiletoArray } = require('./services/processZoneFileData/forma
 // Login to Cpanel
 
 (async function main() {
-
   const configData = await Fs.readFileSync(`./cpanel.txt`,'utf8').trim();
   const args = configData.split('|')
   let config = {}
@@ -46,7 +45,6 @@ const { convertZoneFiletoArray } = require('./services/processZoneFileData/forma
     console.log('not see ZoneFile parameter')
   }
 
-  console.log(config)
 
   // check zonefile exist
   if (Fs.existsSync(config.zoneFile)) {
@@ -62,11 +60,13 @@ const { convertZoneFiletoArray } = require('./services/processZoneFileData/forma
     return
   }
 
+  const zoneFileDataStr = await Fs.readFileSync(config.zoneFile, 'utf-8');
+
   if (config.hostingService == 'namecheap') {
-    await nameCheapHostingProcess(DNSZoneData, config)
+    await nameCheapHostingProcess(DNSZoneData, config , zoneFileDataStr)
   }
   if (config.hostingService == 'hostgator') {
-    await hostgatorHostingProcess(DNSZoneData, config)
+    await hostgatorHostingProcess(DNSZoneData, config , zoneFileDataStr)
   }
 
 })();

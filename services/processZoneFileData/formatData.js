@@ -39,9 +39,6 @@ async function convertZoneFiletoArray(zoneFileName) {
   result.forEach(element => {
     dnsData = element.split(' ').filter(element => { return element.length != '' });
     let dnsType = ''
-    if(dnsData[0][dnsData[0].length-1] =='.'){
-      dnsData[0] = dnsData[0].slice(1,dnsData[0].length - 1)
-    }
     // Label Type 
     if (dnsData[0].indexOf('_domainkey') != -1) {
       if (dnsData[0].indexOf('root._domainkey') != -1) {
@@ -64,7 +61,7 @@ async function convertZoneFiletoArray(zoneFileName) {
       checkSubDomain = false
     }
 
-    if(dnsData[4] && dnsData[4].indexOf('=spf') != -1){
+    if(dnsData[4] && dnsData[3].indexOf('=spf') != -1){
       dnsType = 'spf'
     }
 
