@@ -218,9 +218,9 @@ async function process(dnsZoneData, config , zoneFileDataStr) {
             // listSPFip
             
             let spfNewData = ''
+            spfNewData = rootDomainKeyexist.data_b64[0].replace('-all' , listIpStr )
             spfNewData = rootDomainKeyexist.data_b64[0].replace('?all' , listIpStr )
             spfNewData = rootDomainKeyexist.data_b64[0].replace('~all' , listIpStr )
-            spfNewData = rootDomainKeyexist.data_b64[0].replace('-all' , listIpStr )
             // let dataDnsPost = 
             let postData = `{"dname":"${rootDomainKeyexist.dname_b64}","ttl":1200,"record_type":"${dnsData.dnsData[2]}","line_index":${rootDomainKeyexist.line_index},"data":["${spfNewData}"]}`
             let resApi = await apiRequestNameCheap.requestEditZoneDataApi(domainFinded, IdSessionLogin, sessionLogin, serial, postData)
